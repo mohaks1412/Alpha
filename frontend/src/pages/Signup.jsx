@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import authService from "../services/authService"; // adjust path if needed
-import "./SignUp.css";
+import "./Signup.css";
 import SocialLoginButtons from "../components/auth/SocialLoginButtons";
 import { useNavigate } from "react-router-dom";
 
