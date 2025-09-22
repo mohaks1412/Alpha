@@ -17,7 +17,7 @@ app.use(express.json());
 
 app.use(cookieParser());
 
-const allowedOrigin = "http://localhost:5173"; // your frontend origin
+const allowedOrigin = ["https://alpha-xi-three.vercel.app", "http://localhost:5173"]; // your frontend origin
 
 app.use(cors({
   origin: allowedOrigin,
@@ -41,7 +41,7 @@ app.use("/api/users", userRoutes)
 const server = http.createServer(app);
 const io = new Server(server, {
   cors: {
-    origin: "http://localhost:5173", // your Vite frontend
+    origin: allowedOrigin, // your Vite frontend
     credentials: true,
   },
 });
