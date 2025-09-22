@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+/* The body selector is no longer used for centering */
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f0f4f8; /* A very soft, light blue background */
+  min-height: 100vh; /* Ensure the body takes up the full viewport height */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.profile-container {
+  /* This method centers the container using absolute positioning */
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 75vw; /* Use a fixed max-width for better control */
+  margin: 6.8rem auto;
+  padding: 2rem;
+  border-radius: 12px;
+  background-color: #ffffff;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease-in-out;
+  text-align: center; /* Center the heading and buttons */
+}
+
+.profile-container h2 {
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  font-weight: 600;
+  color: #2c3e50;
+  letter-spacing: -0.5px;
+}
+
+.profile-edit {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  text-align: left;
+}
+
+.profile-edit label {
+  display: block;
+  font-weight: 600;
+  color: #34495e;
+}
+
+.profile-edit input {
+  display: block;
+  width: 100%;
+  padding: 0.75rem 1rem;
+  margin-top: 0.5rem;
+  border: 1px solid #dfe6e9;
+  border-radius: 8px;
+  background-color: #f9fbfd;
+  font-size: 1rem;
+  transition: border-color 0.3s, box-shadow 0.3s, background-color 0.3s;
+}
+
+/* Styles for when the inputs are not in edit mode (read-only) */
+.profile-edit input[readOnly] {
+  border-color: transparent; /* Remove the border */
+  background-color: transparent; /* Match the background */
+  box-shadow: none; /* Remove any shadows */
+  cursor: default; /* No pointer cursor */
+  color: #34495e;
+}
+
+.profile-edit input[readOnly]:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+/* Styles for when the inputs are in edit mode (not read-only) */
+.profile-edit input:not([readOnly]):focus {
+  outline: none;
+  border-color: #3498db;
+  box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2);
+}
+
+.profile-actions {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+button {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 50px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  letter-spacing: 0.5px;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Primary buttons (Edit, Save) */
+.profile-actions button:not(.danger) {
+  background-color: #3498db;
+  color: #ffffff;
+}
+
+.profile-actions button:not(.danger):hover {
+  background-color: #2980b9;
+}
+
+/* Danger button */
+button.danger {
+  background: #e74c3c;
+  color: white;
+}
+
+button.danger:hover {
+  background: #c0392b;
+}

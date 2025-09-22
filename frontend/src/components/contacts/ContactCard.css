@@ -1,0 +1,78 @@
+/* src/components/contacts/ContactCard.css */
+
+.contact-card {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 1rem 1.25rem;
+  border: 1px solid #e0e6ec; /* A light, clean border */
+  border-radius: 12px;
+  background-color: #ffffff;
+  cursor: pointer;
+  text-align: left;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05); /* Subtle shadow for depth */
+}
+
+/* Hover and active states for a great user experience */
+.contact-card:hover {
+  transform: translateY(-3px); /* Lifts the card on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  border-color: #3498db; /* A pop of color on hover */
+}
+
+.contact-card:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.contact-info {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.contact-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.contact-name {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #2c3e50;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.contact-id {
+  font-size: 0.8rem;
+  color: #95a5a6;
+  font-family: monospace;
+  white-space: nowrap;
+}
+
+.contact-email,
+.contact-phone {
+  font-size: 0.9rem;
+  color: #7f8c8d;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.contact-phone {
+  margin-left: 1rem;
+}
+
+/*
+  A slightly different color for text inside the card to
+  create visual separation from the main body text
+*/
+.contact-info span {
+  color: #555;
+}

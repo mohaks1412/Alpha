@@ -1,0 +1,77 @@
+.login-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+/* Container for the tab buttons */
+.tabs {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 20px;
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+/* Base style for the tab buttons */
+.tab {
+  flex: 1;
+  padding: 12px;
+  border: none;
+  background-color: #f4f4f4;
+  color: #666;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+/* Style for the currently active tab */
+.tab.active {
+  background-color: #3498db;
+  color: #fff;
+}
+
+/* The login form itself, styled to match the signup form */
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+}
+
+/* Styling for all input fields within the form */
+.login-form input {
+  padding: 12px 14px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+/* Focus state for input fields */
+.login-form input:focus {
+  border-color: #3498db;
+}
+
+/* Styling for the login button */
+.login-btn {
+  padding: 12px 14px;
+  border: none;
+  border-radius: 6px;
+  background: #3498db;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+/* Hover state for the login button */
+.login-btn:hover {
+  background: #2980b9;
+}

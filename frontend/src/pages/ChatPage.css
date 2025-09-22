@@ -1,0 +1,108 @@
+/* src/pages/ChatPage.css */
+
+.chatpage-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  max-width: 800px;
+  margin: 0 auto;
+  border: 1px solid #e0e6ec;
+  border-radius: 12px;
+  overflow: hidden;
+  background-color: #f8f9fa;
+  font-family: 'Poppins', sans-serif;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.chatpage-header {
+  padding: 1.5rem;
+  background-color: #ffffff;
+  border-bottom: 1px solid #e0e6ec;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #2c3e50;
+  text-align: center;
+}
+
+.messages {
+  flex-grow: 1;
+  padding: 1rem;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.chatpage-input {
+  display: flex;
+  padding: 1rem;
+  background-color: #ffffff;
+  border-top: 1px solid #e0e6ec;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.chatpage-input input {
+  flex-grow: 1;
+  padding: 0.75rem 1rem;
+  border: 1px solid #dfe6e9;
+  border-radius: 50px;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.chatpage-input input:focus {
+  border-color: #3498db;
+  box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
+}
+
+.chatpage-input button {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 50px;
+  background-color: #3498db;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.chatpage-input button:hover {
+  background-color: #2980b9;
+  transform: translateY(-2px);
+}
+
+.chatpage-preview {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 12px;
+  border-top: 1px solid #eee;
+  background: #fafafa;
+}
+
+.chat-preview-image,
+.chat-preview-video {
+  max-width: 80px;
+  max-height: 80px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.chat-preview-file {
+  font-size: 14px;
+  color: #333;
+  flex-grow: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.chat-preview-remove {
+  border: none;
+  background: transparent;
+  color: #d33;
+  font-size: 18px;
+  cursor: pointer;
+}

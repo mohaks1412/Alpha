@@ -1,0 +1,73 @@
+/* src/components/SocialLoginButtons.css */
+
+.social-login-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  width: 100%;
+}
+
+.social-login-list li {
+  width: 100%;
+}
+
+.social-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  background-color: #ffffff;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  color: #333;
+}
+
+.social-btn svg {
+  fill: currentColor;
+  transition: fill 0.3s ease;
+}
+
+.google-btn {
+  border: 1px solid #DB4437;
+  color: #DB4437;
+}
+
+.facebook-btn {
+  border: 1px solid #1877F2;
+  color: #1877F2;
+}
+
+.linkedin-btn {
+  border: 1px solid #0A66C2;
+  color: #0A66C2;
+}
+
+.social-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+.social-btn:hover span {
+  text-decoration: underline;
+}
+
+.google-btn:hover img {
+  filter: saturate(1.5);
+}
+
+.facebook-btn:hover svg {
+  fill: #145cb9;
+}
+
+.linkedin-btn:hover svg {
+  fill: #084c90;
+}
