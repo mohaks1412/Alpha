@@ -3,6 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { logoutUser } from "../../store/authSlice";
 import "./Navbar.css";
+import authService from "../../services/authService";
 
 const Navbar = () => {
   const isLoggedIn = useSelector((state) => !!state.auth.user);
@@ -11,7 +12,7 @@ const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   const handleLogout = () => {
-    dispatch(logoutUser());
+    authService.logout();
     navigate("/login");
   };
 
